@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+</head>
+<body>
+
+  用户名：<input id="name" type="text"><br/>
+  密码：<input id="password" type="password"><br />
+  <input id="sub" type="button" value="登录">
+  <input id="reg" type="button" value="注册">
+  <script>
+    // sdff                   sldf
+    // 福建省多了               sdfsdf
+    // dsfj                   
+    $('#reg').click(function(){
+      $.ajax({
+        url: '/user',
+        method: 'get',
+        data: {
+          act: 'reg',
+          name: $('#name').val(),
+          password: $('#password').val()
+        },
+        success: function (msg) {
+          alert(msg);
+        },
+        error: function (e) {
+          alert(e)
+        }
+      })
+    })
+    $('#sub').click(function(){
+      $.ajax({
+        url: '/user',
+        method: 'get',
+        data: {
+          act: 'login',
+          name: $('#name').val(),
+          password: $('#password').val()
+        },
+        success: function (msg) {
+          alert(msg);
+        },
+        error: function (e) {
+          alert(e)
+        }
+      })
+    })
+  </script>
+</body>
+</html>
