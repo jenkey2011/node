@@ -1,11 +1,32 @@
 {
-  "name": "node",
+  "name": "node_blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A blog power by node.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenkey2011/node.git"
+  },
+  "author": "jenkey2011",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenkey2011/node/issues"
+  },
+  "homepage": "https://github.com/jenkey2011/node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-static": "^1.2.6",
+    "moment": "^2.22.2",
+    "multer": "^1.4.1",
+    "mysql": "^2.16.0"
+  }
 }
